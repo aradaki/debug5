@@ -13,9 +13,15 @@
       <main>
         <p id="notice"><%= notice %></p>
       </main>
-      
+
+    <% if user_signed_in? %>
+
+    <%= render 'searches/search' %>
+    <!-- 検索窓必須だが、あとでログインしている人にしか見えなくする -->
+    <% end %>
+
       <%= yield %>
-      
+
     <%= render 'layouts/footer' %>
   </body>
 </html>

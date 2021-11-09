@@ -1,0 +1,5 @@
+<% if params[:model] == "User" %>
+  <%= render 'users/index', users: @users %> <%# 検索対象がUserのとき、ユーザーを一覧表示 %>
+<% else %>
+  <%= render 'books/index', books: @books %> <%# 検索対象がBookのとき、投稿を一覧表示 %>
+<% end %>
